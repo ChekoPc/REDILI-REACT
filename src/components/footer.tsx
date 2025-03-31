@@ -22,7 +22,7 @@ export const Footer = () => {
                     </div>
 
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                        {/* Sección de Productos */}
+                        {/* Sección de Navegación */}
                         <div>
                             <h2 className="mb-6 text-base font-semibold text-gray-900 dark:text-white">Navegación</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -35,7 +35,7 @@ export const Footer = () => {
                             </ul>
                         </div>
 
-                        {/* Sección de Enlaces útiles */}
+                        {/* Sección de cuenta */}
                         <div>
                             <h2 className="mb-6 text-base font-semibold text-gray-900 dark:text-white">Cuenta</h2>
                             <ul className="text-gray-500 dark:text-gray-400 font-medium">

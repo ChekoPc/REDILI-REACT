@@ -1,7 +1,8 @@
 import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
+import { CardHerramientas } from "@/components/herramientas/card";
 
-export default function DocsPage() {
+export default function HerramientasPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-2">
@@ -9,6 +10,9 @@ export default function DocsPage() {
           <h1 className={title()}>Herramientas</h1>
         </div>
       </section>
+      <br />
+      <CardHerramientas/>
+      <br />
     </DefaultLayout>
   );
 }
