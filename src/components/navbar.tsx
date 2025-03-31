@@ -19,7 +19,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
 
-      {/* Contenedor para el logo "ACME" alineado a la izquierda */}
+      {/* Contenedor para el logo "REDILI" alineado a la izquierda */}
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <Link
