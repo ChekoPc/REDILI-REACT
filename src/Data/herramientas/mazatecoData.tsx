@@ -32,7 +32,7 @@ export const mazatecoData: Mazateco[] = [
     {
         id: 4,
         nombre: "Diccionario mazateco",
-        imagen: "/herramientas/mazateco/04-diccionario.png",
+        imagen: "/herramientas/mazateco/04-diccionario.jpeg",
         pdf: "#",
         link: "#",
     },

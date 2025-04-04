@@ -1,6 +1,9 @@
-import { title } from "@/components/primitives";
+import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import { CardHerramientas } from "@/components/herramientas/card";
+
+import { mazatecoData } from "@/Data/herramientas/mazatecoData";
+import { ixcatecoData } from "@/Data/herramientas/ixcatecoData";
 
 export default function HerramientasPage() {
   return (
@@ -11,7 +14,11 @@ export default function HerramientasPage() {
         </div>
       </section>
       <br />
-      <CardHerramientas/>
+      <h1 className={subtitle()}>Aplicaciones para la lengua Mazateca</h1>
+      <CardHerramientas herramientas={mazatecoData} />
+      <br />
+      <h1 className={subtitle()}>Aplicaciones en la lengua Ixcateca</h1>
+      <CardHerramientas herramientas={ixcatecoData} />
       <br />
     </DefaultLayout>
   );
