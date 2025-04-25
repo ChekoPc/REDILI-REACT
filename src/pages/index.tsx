@@ -4,21 +4,12 @@ import { Image } from "@heroui/react"
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <div
-        style={{
-          backgroundImage: "url('/images/bg1.png')", backgroundRepeat: "repeat",
-          width: "100%", height: "420px", padding: "40px 100px", boxSizing: "border-box",
-        }} className="sm:p-4 md:p-6 lg:padding-[40px_100px]">
-        <div style={{
-          backgroundImage: "url('/images/banner.jpg')", backgroundRepeat: "no-repeat",
-          backgroundSize: "cover", width: "100%", height: "100%", border: "20px solid white",
-          borderRadius: "20px", overflow: "hidden", display: "flex", flexDirection: "column",
-          justifyContent: "center", alignItems: "center", textAlign: "center",
-        }} className="sm:border-[10px] md:border-[15px] lg:border-[20px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white">
+      <div className="w-full aspect-[16/8] sm:aspect-[16/6] md:aspect-[16/5] p-4 sm:p-6 md:p-10 box-border bg-[url('/images/bg1.png')] bg-repeat">
+        <div className="w-full h-full border-[10px] sm:border-[15px] md:border-[20px] border-white rounded-[20px] sm:rounded-[25px] md:rounded-[35px] overflow-hidden flex flex-col justify-center items-center text-center bg-[url('/images/banner.jpg')] bg-no-repeat bg-cover">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white">
             Lenguas Indígenas en México
           </h1>
-          <span className="text-xl sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-4 text-white px-4 sm:px-0">
+          <span className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-4 text-white px-4 sm:px-0">
             Preservando nuestras lenguas, conectando con nuestras raíces ...
           </span>
         </div>
@@ -30,12 +21,12 @@ export default function IndexPage() {
           <span className="text-2xl font-bold mb-4" style={styles.colorTittle}>
             Bienvenido al Repositorio
           </span>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify" style={styles.colorText}>
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
             Este espacio es para presentar los trabajos y avances que se llevan a cabo en las lenguas maternas.
             Agradecemos a todos aquellos que apoyan a difundir, conservar y recatar la lengua materna en su comunidad,
             esperando que este material les sirva de apoyo.
           </p>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify" style={styles.colorText}>
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
             Nuestro principal objetivo es hacer accesibles los recursos lingüísticos y culturales en línea, fomentando
             la enseñanza y el aprendizaje de las lenguas indígenas, así como la investigación y documentación
             lingüística y cultural.
@@ -57,8 +48,8 @@ export default function IndexPage() {
                 height={110}
               />
               <div className="text-center sm:text-left mt-2 sm:mt-0">
-                <p className="font-bold text-large">M. C. Beatriz Adriana Sabino Moxo</p>
-                <small className="text-default-500">Profesora-Investigadora</small>
+                <p className="font-bold">M. C. Beatriz Adriana Sabino Moxo</p>
+                <p className="text-[#878E83] dark:text-white">Profesora-Investigadora</p>
               </div>
             </div>
           </div>
@@ -72,8 +63,8 @@ export default function IndexPage() {
                 height={110}
               />
               <div className="text-center sm:text-left mt-2 sm:mt-0">
-                <p className="font-bold text-large">M. C. José Alberto Márquez Domínguez</p>
-                <small className="text-default-500">Profesor Investigador</small>
+                <p className="font-bold">M. C. José Alberto Márquez Domínguez</p>
+                <p className="text-[#878E83] dark:text-white">Profesor Investigador</p>
               </div>
             </div>
           </div>
@@ -84,7 +75,7 @@ export default function IndexPage() {
           <span className="text-2xl font-bold mb-4" style={styles.colorTittle}>
             Objetivo
           </span>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify" style={styles.colorText}>
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
             La educación es esencial en todos los niveles, sin embargo, las dificultades que presentan cada nivel es
             necesario utilizar las tecnologías, para poder hacer uso de ellas es necesario la colaboración entre
             estudiantes y el profesor que imparte la materia, otro elemento necesario en escuelas bilingües es la
@@ -101,7 +92,8 @@ const styles = {
   colorTittle: {
     color: "#007897",
   },
-  colorText: {
-    color: "#878E83",
-  },
+  // colorText: {
+  //   color: "#878E83",
+  // },
+  // se reemplazo por text-[#878E83] dark:text-white
 }
