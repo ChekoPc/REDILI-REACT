@@ -27,7 +27,8 @@ export const Navbar = () => {
             color="foreground"
             href="/"
           >
-            <img src="/logo.png" alt="Logo" style={{ width: '36px', height: '36px' }} />
+            <img src="/logo.png" alt="Logo REDILI" className="block dark:hidden" style={{ width: '36px', height: '36px' }}/>
+            <img src="/logo-dark.png" alt="Logo REDILI" className="hidden dark:block" style={{ width: '36px', height: '36px' }}/>
             <p className="font-bold text-inherit">REDILI</p>
           </Link>
         </NavbarBrand>
