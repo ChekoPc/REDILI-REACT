@@ -1,6 +1,8 @@
 import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
+import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
+
 export default function AudiosPage() {
   return (
     <DefaultLayout>
@@ -8,6 +10,7 @@ export default function AudiosPage() {
         <div className="inline-block max-w-lg text-center justify-center">
           <h1 className={title()}>Audios</h1>
         </div>
+        <AudioPlayer/>
       </section>
     </DefaultLayout>
   );
