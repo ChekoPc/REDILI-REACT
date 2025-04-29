@@ -25,7 +25,7 @@ const AudioCard: React.FC<AudioCardProps> = ({ audio }) => {
             <div className="p-5">
                 <h3 className="text-gray-900 dark:text-white text-lg">{audio.nombre}</h3>
                 <p className="text-gray-800 dark:text-gray-400">{audio.autor}</p>
-                <audio controls className="w-full mt-4">
+                <audio controls className="w-full mt-2">
                     <source src={audio.src} type="audio/mpeg" />
                     Tu navegador no soporta el elemento de audio.
                 </audio>
