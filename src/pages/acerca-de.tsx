@@ -61,8 +61,14 @@ export default function AcercaDePage() {
           <div className="flex justify-center items-center">
             <Image
               alt="Repositorio digital de lenguas indígenas"
-              className="object-cover rounded-xl"
+              className="object-cover rounded-xl block dark:hidden"
               src="/images/acerca-de/pic1.png"
+              height={220}
+            />
+            <Image
+              alt="Repositorio digital de lenguas indígenas"
+              className="object-cover rounded-xl hidden dark:block"
+              src="/images/acerca-de/pic1-dark.png"
               height={220}
             />
           </div>
@@ -76,7 +82,7 @@ export default function AcercaDePage() {
               llevar a cabo los diferentes proyectos.
             </p>
             <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
-              Realizado por Sergio Eliseo Peña Calderón y supervisados por los colaoradores del proyecto.
+              Realizado por Sergio Eliseo Peña Calderón y supervisados por los colaboradores del proyecto.
             </p>
           </div>
         </div>
