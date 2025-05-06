@@ -35,7 +35,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       {/* Contenedor para los elementos de navegación centrados */}
-      <NavbarContent className="hidden lg:flex gap-4 justify-center flex-grow">
+      <NavbarContent className="hidden max-lgplus:hidden lg:flex gap-4 justify-center flex-grow">
         {siteConfig.navItems.map((item) => (
           <NavbarItem key={item.href}>
             <Link
@@ -53,14 +53,14 @@ export const Navbar = () => {
       </NavbarContent>
 
       {/* Contenedor para el interruptor de tema alineado a la derecha */}
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-        <NavbarItem className="hidden sm:flex gap-2">
+      <NavbarContent className="hidden lg:flex basis-1/5 sm:basis-full" justify="end">
+        <NavbarItem className="gap-2">
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
 
       {/* Contenedor para el menú móvil */}
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="flex lg:hidden basis-1 pl-4" justify="end">
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
