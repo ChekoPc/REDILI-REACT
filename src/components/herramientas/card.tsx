@@ -33,7 +33,7 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
 
             {/* Contenido a la derecha */}
             <div className="w-2/3 flex flex-col">
-              <h4 className="font-bold text-large">{herramienta.nombre}</h4>
+              <h4 className="font-bold text-large text-body dark:text-white">{herramienta.nombre}</h4>
 
               {herramienta.link && (
                 <Link
@@ -46,7 +46,7 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
                 </Link>
               )}
 
-              <div className="flex items-center mt-2">
+              <div className="flex items-center mt-2 text-body dark:text-white">
                 <p>Descargar</p>
                 <DownloadRoundedIcon className="ml-1" />
               </div>

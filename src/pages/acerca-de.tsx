@@ -8,7 +8,7 @@ export default function AcercaDePage() {
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-4 mt-8 px-4 sm:px-4 lg:px-0">
         {/* columna 1 */}
         <div className="p-4">
-          <span className="text-2xl font-bold mb-4" style={styles.colorTittle}>
+          <span className="text-2xl font-bold mb-4 text-title">
             ¿Quienes somos?
           </span>
           <div className="p-4">
@@ -21,7 +21,7 @@ export default function AcercaDePage() {
               />
               <div className="text-center sm:text-left mt-2 sm:mt-0">
                 <p className="font-bold">Cuerpo Académico Tecnología Computacional Aplicada</p>
-                <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+                <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
                   Conjunto de profesores que están a cargo del desarrollo de aplicaciones
                   orientadas a coadyuvar en la sociedad.
                 </p>
@@ -38,20 +38,20 @@ export default function AcercaDePage() {
               />
               <div className="text-center sm:text-left mt-2 sm:mt-0">
                 <p className="font-bold">Laboratorio de Investigación y Desarrollo de Software</p>
-                <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+                <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
                   Conjunto de profesores que están a cargo del desarrollo de aplicaciones
                   orientadas a coadyuvar en la sociedad.
                 </p>
               </div>
             </div>
           </div>
-          <span className="text-2xl font-bold mb-4" style={styles.colorTittle}>
+          <span className="text-2xl font-bold mb-4 text-title">
             Contacto
           </span>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
             www.unca.edu.mx
           </p>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
             foroTCA@unca.edu.mx
           </p>
         </div>
@@ -73,15 +73,15 @@ export default function AcercaDePage() {
             />
           </div>
           <div className="mt-10">
-            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
               Este surgio por la necesidad de compartir el material que se ha adquirido en las diferentes
               investigaciones, y que esté abierto al público para su utilización.
             </p>
-            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
               También se les da un agradecimiento a todas las personas que han colaborado y contribuído a
               llevar a cabo los diferentes proyectos.
             </p>
-            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-[#878E83] dark:text-white">
+            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
               Realizado por Sergio Eliseo Peña Calderón y supervisados por los colaboradores del proyecto.
             </p>
           </div>
@@ -89,10 +89,4 @@ export default function AcercaDePage() {
       </div>
     </DefaultLayout>
   );
-}
-
-const styles = {
-  colorTittle: {
-    color: "#007897",
-  },
 }
