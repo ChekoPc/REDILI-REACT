@@ -21,12 +21,12 @@ export default function IndexPage() {
           <span className="text-2xl font-bold mb-4 text-title">
             Bienvenido al Repositorio
           </span>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
             Este espacio es para presentar los trabajos y avances que se llevan a cabo en las lenguas maternas.
             Agradecemos a todos aquellos que apoyan a difundir, conservar y recatar la lengua materna en su comunidad,
             esperando que este material les sirva de apoyo.
           </p>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
             Nuestro principal objetivo es hacer accesibles los recursos lingüísticos y culturales en línea, fomentando
             la enseñanza y el aprendizaje de las lenguas indígenas, así como la investigación y documentación
             lingüística y cultural.
@@ -49,7 +49,7 @@ export default function IndexPage() {
               />
               <div className="text-center sm:text-left mt-2 sm:mt-0">
                 <p className="font-bold">M. C. Beatriz Adriana Sabino Moxo</p>
-                <p className="text-body dark:text-white">Profesora-Investigadora</p>
+                <p className="text-body ">Profesora-Investigadora</p>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function IndexPage() {
               />
               <div className="text-center sm:text-left mt-2 sm:mt-0">
                 <p className="font-bold">M. C. José Alberto Márquez Domínguez</p>
-                <p className="text-body dark:text-white">Profesor Investigador</p>
+                <p className="text-body ">Profesor Investigador</p>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function IndexPage() {
           <span className="text-2xl font-bold mb-4 text-title">
             Objetivo
           </span>
-          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body dark:text-white">
+          <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
             La educación es esencial en todos los niveles, sin embargo, las dificultades que presentan cada nivel es
             necesario utilizar las tecnologías, para poder hacer uso de ellas es necesario la colaboración entre
             estudiantes y el profesor que imparte la materia, otro elemento necesario en escuelas bilingües es la

@@ -7,6 +7,23 @@
     color: #007897;
 }
 
+.dark .text-title {
+    color: #007897;
+}
+
 .text-body {
     color: #878E83;
+}
+
+.dark .text-body {
+    color: #ffffff;
+  }
+
+/* color footer */
+.bg-footer {
+    background-color: #E3E9DC;
+}
+
+.dark .bg-footer {
+    background-color: #000000;
 }
