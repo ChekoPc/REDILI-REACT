@@ -37,7 +37,8 @@ Puedes usar uno de ellos `npm`, `yarn`, `pnpm`, `bun`, Ejemplo usando `npm`:
 npm install
 ```
 
-### Run the development server
+### Ejecute el servidor de desarrollo
+
 Puedes usar uno de ellos `npm`, `yarn`, `pnpm`, `bun`, Ejemplo usando `npm`:
 
 - Ejecutar proyecto con npm:
