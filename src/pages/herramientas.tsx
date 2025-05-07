@@ -7,15 +7,17 @@ import { ixcatecoData } from "@/Data/herramientas/ixcatecoData";
 export default function HerramientasPage() {
   return (
     <DefaultLayout>
-      <span className="text-2xl font-bold mb-4 text-title">
-        Aplicaciones para la lengua Mazateca
-      </span>
-      <CardHerramientas herramientas={mazatecoData} />
-      <span className="text-2xl font-bold mb-4 text-title">
-        Aplicaciones en la lengua Ixcateca
-      </span>
-      <CardHerramientas herramientas={ixcatecoData} />
-      <br />
+      <div className="contenedor-principal">
+        <span className="text-2xl font-bold mb-4 text-title">
+          Aplicaciones para la lengua Mazateca
+        </span>
+        <CardHerramientas herramientas={mazatecoData} />
+        <span className="text-2xl font-bold mb-4 text-title">
+          Aplicaciones en la lengua Ixcateca
+        </span>
+        <CardHerramientas herramientas={ixcatecoData} />
+        <br />
+      </div>
     </DefaultLayout>
   );
 }
