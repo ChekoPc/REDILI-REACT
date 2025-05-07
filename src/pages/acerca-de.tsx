@@ -8,7 +8,7 @@ export default function AcercaDePage() {
       <div className="contenedor-principal">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-4 px-4 sm:px-4 lg:px-0">
           {/* columna 1 */}
-          <div className="p-4">
+          <div className="p-4 order-2 md:order-1">
             <span className="text-2xl font-bold mb-4 text-title">
               ¿Quienes somos?
             </span>
@@ -16,7 +16,7 @@ export default function AcercaDePage() {
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Image
                   alt="TCA"
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl w-40 sm:w-[280px]"
                   src="/images/acerca-de/pic2.png"
                   width={280}
                 />
@@ -33,7 +33,7 @@ export default function AcercaDePage() {
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Image
                   alt="TCA"
-                  className="object-cover rounded-xl"
+                  className="object-cover rounded-xl w-40 sm:w-[280px]"
                   src="/images/acerca-de/pic3.png"
                   width={280}
                 />
@@ -58,19 +58,19 @@ export default function AcercaDePage() {
           </div>
 
           {/* columna 2 */}
-          <div className="p-4">
+          <div className="p-4 order-1 md:order-2">
             <div className="flex justify-center items-center">
               <Image
                 alt="Repositorio digital de lenguas indígenas"
                 className="object-cover rounded-xl block dark:hidden"
                 src="/images/acerca-de/pic1.png"
-                height={220}
+                width={440}
               />
               <Image
                 alt="Repositorio digital de lenguas indígenas"
                 className="object-cover rounded-xl hidden dark:block"
                 src="/images/acerca-de/pic1-dark.png"
-                height={220}
+                width={440}
               />
             </div>
             <div className="mt-10">
