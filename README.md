@@ -1,6 +1,7 @@
 # REDILI
 
 Repositorio Digital de Lenguas Indígenas
+[![Logo](https://i.postimg.cc/NFbGJ65W/pic1.png)](https://postimg.cc/SY2pjzLr)
 
 ## Tecnologías utilizadas - Vite & HeroUI
 
