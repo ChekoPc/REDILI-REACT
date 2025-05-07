@@ -1,10 +1,8 @@
-# Vite & HeroUI Template
+# REDILI
 
-This is a template for creating applications using Vite and HeroUI (v2).
+Repositorio Digital de Lenguas Indígenas
 
-[Try it on CodeSandbox](https://githubbox.com/frontio-ai/vite-template)
-
-## Technologies Used
+## Tecnologías utilizadas - Vite & HeroUI
 
 - [Vite](https://vitejs.dev/guide/)
 - [HeroUI](https://heroui.com)
@@ -13,38 +11,54 @@ This is a template for creating applications using Vite and HeroUI (v2).
 - [TypeScript](https://www.typescriptlang.org)
 - [Framer Motion](https://www.framer.com/motion)
 
-## How to Use
+## Cómo utilizar
 
-To clone the project, run the following command:
+Para clonar el proyecto, ejecute el siguiente comando:
 
+- Con SSH:
 ```bash
-git clone https://github.com/frontio-ai/vite-template.git
+git clone git@github.com:sg-cheko/REDILI.git
 ```
 
-### Install dependencies
+- Con HTTPS:
+```bash
+git clone https://github.com/sg-cheko/REDILI.git
+```
+- Con CLI:
+```bash
+gh repo clone sg-cheko/REDILI
+```
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+### Instalar dependencias
+
+Puedes usar uno de ellos `npm`, `yarn`, `pnpm`, `bun`, Ejemplo usando `npm`:
 
 ```bash
 npm install
 ```
 
 ### Run the development server
+Puedes usar uno de ellos `npm`, `yarn`, `pnpm`, `bun`, Ejemplo usando `npm`:
 
+- Ejecutar proyecto con npm:
 ```bash
 npm run dev
 ```
+- Ejecutar proyecto con npm con permisos de acceso:
+```bash
+npm run dev -- --host
+```
 
-### Setup pnpm (optional)
+### Configurar pnpm (opcional)
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+Si está utilizando `pnpm`, debe agregar el siguiente código a su archivo `.npmrc`:
 
 ```bash
 public-hoist-pattern[]=*@heroui/*
 ```
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+Después de modificar el archivo `.npmrc`, debe ejecutar `pnpm install` nuevamente para asegurarse de que las dependencias se instalen correctamente.
 
-## License
+## Licencia
 
-Licensed under the [MIT license](https://github.com/frontio-ai/vite-template/blob/main/LICENSE).
+Con licencia bajo la [licencia MIT](https://github.com/frontio-ai/vite-template/blob/main/LICENSE).
