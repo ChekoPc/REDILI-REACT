@@ -1,34 +1,30 @@
-import { Link } from "@heroui/link";
-import {
-  Navbar as HeroUINavbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-} from "@heroui/navbar";
-import { link as linkStyles } from "@heroui/theme";
-import clsx from "clsx";
+import { Link } from "@heroui/link"
+import { Navbar as HeroUINavbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, } from "@heroui/navbar"
+import { link as linkStyles } from "@heroui/theme"
+import clsx from "clsx"
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { siteConfig } from "@/config/site"
+import { ThemeSwitch } from "@/components/theme-switch"
 
 export const Navbar = () => {
-
   return (
     <HeroUINavbar maxWidth="xl" position="sticky">
-
       {/* Contenedor para el logo "REDILI" alineado a la izquierda */}
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
-          <Link
-            className="flex justify-start items-center gap-1"
-            color="foreground"
-            href="/"
-          >
-            <img src="/logo.png" alt="Logo REDILI" className="block dark:hidden" style={{ width: '36px', height: '36px' }}/>
-            <img src="/logo-dark.png" alt="Logo REDILI" className="hidden dark:block" style={{ width: '36px', height: '36px' }}/>
+          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
+            <img
+              src="/logo.png"
+              alt="Logo REDILI"
+              className="block dark:hidden"
+              style={{ width: "36px", height: "36px" }}
+            />
+            <img
+              src="/logo-dark.png"
+              alt="Logo REDILI"
+              className="hidden dark:block"
+              style={{ width: "36px", height: "36px" }}
+            />
             <p className="font-bold text-inherit">REDILI</p>
           </Link>
         </NavbarBrand>
@@ -41,7 +37,7 @@ export const Navbar = () => {
             <Link
               className={clsx(
                 linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary data-[active=true]:font-medium"
+                "data-[active=true]:text-primary data-[active=true]:font-medium",
               )}
               color="foreground"
               href={item.href}
@@ -67,9 +63,16 @@ export const Navbar = () => {
 
       {/* Menú móvil */}
       <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        {/* Logo centrado en el menú móvil */}
+        <div className="flex justify-center mb-6">
+          <img src="/logo.png" alt="Logo" className="w-16 h-16 block dark:hidden" />
+          <img src="/logo-dark.png" alt="Logo" className="w-16 h-16 hidden dark:block" />
+        </div>
+
+        {/* Enlaces de navegación */}
+        <div className="mx-auto flex flex-col items-center gap-6 text-xl">
           {siteConfig.navItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem key={`${item}-${index}`} className="w-full text-center">
               <Link
                 color="foreground"
                 href={item.href}
@@ -81,7 +84,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-
     </HeroUINavbar>
-  );
-};
+  )
+}
