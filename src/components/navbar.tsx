@@ -1,82 +1,102 @@
+"use client"
+
+import { useState } from "react"
 import { Link } from "@heroui/link"
-import { Navbar as HeroUINavbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, } from "@heroui/navbar"
-import { link as linkStyles } from "@heroui/theme"
+import {
+  Navbar as HeroUINavbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+} from "@heroui/navbar"
 import clsx from "clsx"
 
 import { siteConfig } from "@/config/site"
 import { ThemeSwitch } from "@/components/theme-switch"
 
 export const Navbar = () => {
+  // Añadimos un estado para controlar la apertura/cierre del menú
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  // Función para manejar el toggle del menú
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      {/* Contenedor para el logo "REDILI" alineado a la izquierda */}
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand className="gap-3 max-w-fit">
-          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
-            <img
-              src="/logo.png"
-              alt="Logo REDILI"
-              className="block dark:hidden"
-              style={{ width: "36px", height: "36px" }}
-            />
-            <img
-              src="/logo-dark.png"
-              alt="Logo REDILI"
-              className="hidden dark:block"
-              style={{ width: "36px", height: "36px" }}
-            />
-            <p className="font-bold text-inherit">REDILI</p>
-          </Link>
-        </NavbarBrand>
-      </NavbarContent>
+    <HeroUINavbar
+      maxWidth="xl"
+      position="sticky"
+      className="bg-[#006B89] shadow-md backdrop-blur-md py-3 px-0 z-50"
+      // Controlamos el estado del menú explícitamente
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <div className="flex w-full items-center px-4">
+        {/* Logo + navegación */}
+        <div className="flex items-center justify-between bg-transparent lg:bg-[#007B9D] w-full rounded-xl px-4 py-2">
+          {/* Logo */}
+          <NavbarContent className="flex-none" justify="start">
+            <NavbarBrand className="gap-3 max-w-fit">
+              <Link className="flex items-center gap-2 text-white hover:opacity-90 transition" href="/">
+                <img src="/logo-white.png" alt="Logo REDILI" className="w-9 h-9" />
+                <span className="font-semibold text-lg tracking-wide text-white">REDILI</span>
+              </Link>
+            </NavbarBrand>
+          </NavbarContent>
 
-      {/* Contenedor para los elementos de navegación centrados */}
-      <NavbarContent className="hidden max-lgplus:hidden lg:flex gap-4 justify-center flex-grow">
-        {siteConfig.navItems.map((item) => (
-          <NavbarItem key={item.href}>
-            <Link
-              className={clsx(
-                linkStyles({ color: "foreground" }),
-                "data-[active=true]:text-primary data-[active=true]:font-medium",
-              )}
-              color="foreground"
-              href={item.href}
-            >
-              {item.label}
-            </Link>
-          </NavbarItem>
-        ))}
-      </NavbarContent>
+          {/* Menú de navegación */}
+          <NavbarContent className="hidden lg:flex gap-6 p-2 absolute left-1/2 transform -translate-x-1/2">
+            {siteConfig.navItems.map((item) => (
+              <NavbarItem key={item.href}>
+                <Link
+                  className={clsx(
+                    "text-white font-medium hover:text-white/80 transition-colors duration-200",
+                    "data-[active=true]:underline data-[active=true]:font-semibold",
+                  )}
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              </NavbarItem>
+            ))}
+          </NavbarContent>
 
-      {/* Contenedor para el interruptor de tema alineado a la derecha */}
-      <NavbarContent className="hidden lg:flex basis-1/5 sm:basis-full" justify="end">
-        <NavbarItem className="gap-2">
-          <ThemeSwitch />
-        </NavbarItem>
-      </NavbarContent>
-
-      {/* Contenedor para el menú móvil */}
-      <NavbarContent className="flex lg:hidden basis-1 pl-4" justify="end">
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      {/* Menú móvil */}
-      <NavbarMenu>
-        {/* Logo centrado en el menú móvil */}
-        <div className="flex justify-center mb-6">
-          <img src="/logo.png" alt="Logo" className="w-16 h-16 block dark:hidden" />
-          <img src="/logo-dark.png" alt="Logo" className="w-16 h-16 hidden dark:block" />
+          {/* Interruptor de tema */}
+          <NavbarContent className="hidden lg:flex" justify="end">
+            <NavbarItem>
+              <ThemeSwitch />
+            </NavbarItem>
+          </NavbarContent>
         </div>
 
-        {/* Enlaces de navegación */}
-        <div className="mx-auto flex flex-col items-center gap-6 text-xl">
+        {/* Menú hamburguesa */}
+        <NavbarContent className="flex lg:hidden pl-2" justify="end">
+          <ThemeSwitch />
+          <NavbarMenuToggle
+            className="text-white ml-2"
+            // Usamos el manejador de eventos personalizado
+            onClick={handleMenuToggle}
+          // Aseguramos que el estado visual refleje el estado real
+          />
+        </NavbarContent>
+      </div>
+
+      {/* Menú móvil */}
+      <NavbarMenu className="bg-[rgba(0,123,157,0.7)] pt-6 pb-12 px-4">
+        <Link className="flex justify-center mb-4 mt-5" href="/">
+          <img src="/logo-white.png" alt="Logo REDILI" className="w-16 h-16" />
+        </Link>
+
+        <div className="flex flex-col items-center gap-5 text-white text-lg">
           {siteConfig.navItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`} className="w-full text-center">
+            <NavbarMenuItem key={index} className="w-full text-center">
               <Link
-                color="foreground"
+                className="!text-white hover:!text-white/80 transition-colors"
                 href={item.href}
-                size="lg"
+                onPress={() => setIsMenuOpen(false)}
               >
                 {item.label}
               </Link>
