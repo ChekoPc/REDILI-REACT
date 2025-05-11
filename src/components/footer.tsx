@@ -14,7 +14,7 @@ export const Footer = () => {
                     <div className="mb-6 md:mb-0">
                         <Link to="/" className="mb-4 flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white md:justify-start">
                             <img src="/logo.png" className="mr-2 h-12 block dark:hidden" alt="Logo REDILI"/>
-                            <img src="/logo-dark.png" className="mr-2 h-12 hidden dark:block" alt="Logo REDILI"/>
+                            <img src="/logo-white.png" className="mr-2 h-12 hidden dark:block" alt="Logo REDILI"/>
                             REDILI
                         </Link>
                         <p className="text-gray-500 dark:text-gray-400 text-center mx-auto">
