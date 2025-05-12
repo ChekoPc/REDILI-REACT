@@ -7,7 +7,7 @@ import { ixcatecoData } from "@/Data/herramientas/ixcatecoData";
 export default function HerramientasPage() {
   return (
     <DefaultLayout>
-      <div className="contenedor-principal">
+      <div className="contenedor-principal mt-12">
         <span className="text-2xl font-bold mb-4 text-title">
           Aplicaciones para la lengua Mazateca
         </span>

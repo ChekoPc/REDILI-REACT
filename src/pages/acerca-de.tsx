@@ -5,7 +5,7 @@ import { Image } from "@heroui/react"
 export default function AcercaDePage() {
   return (
     <DefaultLayout>
-      <div className="contenedor-principal">
+      <div className="contenedor-principal mt-12">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-4 px-4 sm:px-4 lg:px-0">
           {/* columna 1 */}
           <div className="p-4 order-2 md:order-1">
