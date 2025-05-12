@@ -18,7 +18,7 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
       {herramientas.map((herramienta) => (
-        <Card key={herramienta.id} className="py-4 transition-shadow h-full">
+        <Card key={herramienta.id} className="py-4 transition-shadow h-full bg-[#ECF0F3] dark:bg-[#18181B] rounded-xl shadow-md">
           <div className="flex flex-row p-4">
             {/* Imagen a la izquierda */}
             <div className="w-1/3 pr-4">
@@ -54,14 +54,16 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
               {/* Botones para descargar Aplicación y PDF */}
               <div className="flex mt-2 space-x-2">
                 {herramienta.aplicacion && (
-                  <Button color="primary" as="a" href={herramienta.aplicacion}>
+                  <Button as="a" href={herramienta.aplicacion} className="bg-[#007B9D] text-white hover:bg-[#006882]">
                     Aplicación
                   </Button>
+
                 )}
                 {herramienta.pdf && (
-                  <Button color="primary" as="a" href={herramienta.pdf} target="_blank" rel="noopener noreferrer">
+                  <Button as="a" href={herramienta.pdf} target="_blank" rel="noopener noreferrer" className="bg-[#007B9D] text-white hover:bg-[#006882]">
                     PDF
                   </Button>
+
                 )}
               </div>
             </div>
