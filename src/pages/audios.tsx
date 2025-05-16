@@ -1,18 +1,22 @@
-import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
-import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
+import AudioPlayer from "@/components/audios/AudioPlayer";
+
+import { cuentosMazatecos } from "@/Data/audios/cuentosMazatecosData";
+import { cuentosCuicatecos } from "@/Data/audios/cuentosCuicatecosData";
 
 export default function AudiosPage() {
   return (
     <DefaultLayout>
       <div className="contenedor-principal margin-top-page">
-        <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-2">
-          <div className="inline-block max-w-lg text-center justify-center">
-            <h1 className={title()}>Audios</h1>
-          </div>
-          <AudioPlayer />
-        </section>
+        <span className="text-2xl font-bold mb-4 text-title">
+          Cuentos Mazatecos
+        </span>
+        <AudioPlayer audios={cuentosMazatecos} />
+        <span className="text-2xl font-bold mb-4 text-title">
+          Cuentos Cuicatecos
+        </span>
+        <AudioPlayer audios={cuentosCuicatecos} />
       </div>
     </DefaultLayout>
   );
