@@ -3,7 +3,7 @@ import DefaultLayout from "@/layouts/default";
 export default function AntecedentesPage() {
   return (
     <DefaultLayout>
-      <div className="contenedor-principal mt-12">
+      <div className="contenedor-principal margin-top-page">
         <span className="text-2xl font-bold mb-4 text-title gap-4 px-4 sm:px-4 lg:px-0">
           Lenguas Maternas
         </span>

@@ -7,6 +7,10 @@
     @apply container mx-auto w-full max-w-full px-4 sm:px-6 md:px-8 lg:max-w-[88rem] flex-grow;
 }
 
+.margin-top-page {
+    @apply mt-12;
+}
+
 /* Color de navbar */
 .bg-navbar {
     background-color: rgba(0, 125, 157, 0.8);
