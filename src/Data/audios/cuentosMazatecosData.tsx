@@ -3,6 +3,7 @@ export interface CuentoMazateco {
     autor: string;
     caratula: string;
     src: string;
+    letra?: string;
     id: number;
 }
 
@@ -33,6 +34,7 @@ export const cuentosMazatecos: CuentoMazateco[] = [
         autor: "Cuento Nativo", 
         caratula: "/audios/audio1.png",
         src: "/audios/audio1.mp3",
+        letra: "/audios/audio1.txt",
         id: 4
     },
 ];

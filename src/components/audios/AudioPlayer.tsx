@@ -3,12 +3,14 @@
 import type React from "react"
 import { useRef } from "react"
 import { Card, Image } from "@heroui/react"
+import AudioPopover from "./popover"
 
 export interface Audios {
   nombre: string
   autor: string
   caratula: string
   src: string
+  letra?: string
   id: number
 }
 
@@ -43,6 +45,9 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audios }) => {
             <h3 className="font-bold text-lg">{audio.nombre}</h3>
             <p className="text-sm">{audio.autor}</p>
           </div>
+          {audio.letra && (
+            <AudioPopover label={`${audio.nombre} de ${audio.autor}`} letra={audio.letra} />
+          )}
           <audio
             ref={(element) => {
               audioRefs.current[audio.id] = element
