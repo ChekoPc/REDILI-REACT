@@ -35,28 +35,32 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audios }) => {
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 p-4">
       {audios.map((audio) => (
-        <Card key={audio.id} className="flex flex-col items-center p-4">
-          <Image
-            src={audio.caratula || "/placeholder.svg"}
-            alt={`Carátula de ${audio.nombre}`}
-            className="w-32 h-32 object-cover rounded-xl mb-2"
-          />
-          <div className="text-center">
-            <h3 className="font-bold text-lg">{audio.nombre}</h3>
-            <p className="text-sm">{audio.autor}</p>
-          </div>
+        <Card key={audio.id} className="relative p-4">
           {audio.letra && (
-            <AudioPopover label={`${audio.nombre} de ${audio.autor}`} letra={audio.letra} />
+            <div className="absolute top-2 right-2 z-10">
+              <AudioPopover label={`${audio.nombre} de ${audio.autor}`} letra={audio.letra} />
+            </div>
           )}
-          <audio
-            ref={(element) => {
-              audioRefs.current[audio.id] = element
-            }}
-            src={audio.src}
-            controls
-            className="mt-3 w-full"
-            onPlay={() => handlePlay(audio.id)}
-          />
+          <div className="flex flex-col items-center">
+            <Image
+              src={audio.caratula || "/placeholder.svg"}
+              alt={`Carátula de ${audio.nombre}`}
+              className="w-32 h-32 object-cover rounded-xl mb-2"
+            />
+            <div className="text-center">
+              <h3 className="font-bold text-lg">{audio.nombre}</h3>
+              <p className="text-sm">{audio.autor}</p>
+            </div>
+            <audio
+              ref={(element) => {
+                audioRefs.current[audio.id] = element
+              }}
+              src={audio.src}
+              controls
+              className="mt-3 w-full"
+              onPlay={() => handlePlay(audio.id)}
+            />
+          </div>
         </Card>
       ))}
     </div>

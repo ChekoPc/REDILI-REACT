@@ -7,7 +7,7 @@ interface AudioPopoverProps {
   letra?: string;
 }
 
-const AudioPopover: React.FC<AudioPopoverProps> = ({ label, buttonLabel = "letra", letra }) => {
+const AudioPopover: React.FC<AudioPopoverProps> = ({ label, buttonLabel = "Letra", letra }) => {
   const [letraContent, setLetraContent] = useState<string>("");
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const AudioPopover: React.FC<AudioPopoverProps> = ({ label, buttonLabel = "letra
   return (
     <Popover placement="right">
       <PopoverTrigger>
-        <Button color="primary">{buttonLabel}</Button>
+        <Button className="text-title font-bold" variant="faded" size="sm">{buttonLabel}</Button>
       </PopoverTrigger>
       <PopoverContent>
         <div className="px-1 py-2 max-h-60 overflow-auto text-sm whitespace-pre-wrap">
