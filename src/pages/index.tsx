@@ -5,12 +5,12 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       
-      <div className="w-full aspect-[16/8] sm:aspect-[16/6] md:aspect-[16/4] p-4 sm:p-6 md:p-10 box-border bg-[url('/images/bg1.png')] bg-repeat">
+      <div className="w-full aspect-[16/9] sm:aspect-[16/6] md:aspect-[16/7] p-4 sm:p-6 md:p-10 box-border bg-[url('/images/bg1.png')] bg-repeat">
         <div className="w-full h-full border-[10px] sm:border-[15px] md:border-[20px] border-white rounded-[20px] sm:rounded-[25px] md:rounded-[35px] overflow-hidden flex flex-col justify-center items-center text-center bg-[url('/images/banner.jpg')] bg-no-repeat bg-cover">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white">
             Lenguas Indígenas en México
           </h1>
-          <span className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-4 text-white px-4 sm:px-0">
+          <span className="text-base sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-4 text-white px-4 sm:px-0">
             Preservando nuestras lenguas, conectando con nuestras raíces ...
           </span>
         </div>
