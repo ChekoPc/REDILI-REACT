@@ -1,5 +1,4 @@
 import { Card, Image, Button, Link } from "@heroui/react"
-import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded"
 
 interface Herramienta {
   id: number
@@ -46,13 +45,8 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
                 </Link>
               )}
 
-              <div className="flex items-center mt-2 text-body">
-                <p>Descargar</p>
-                <DownloadRoundedIcon className="ml-1" />
-              </div>
-
               {/* Botones para descargar Aplicación y PDF */}
-              <div className="flex mt-2 space-x-2">
+              <div className="flex mt-7 space-x-2">
                 {herramienta.aplicacion && (
                   <Button as="a" href={herramienta.aplicacion} className="bg-[#007B9D] text-white hover:bg-[#006882]">
                     Aplicación
@@ -73,4 +67,3 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
     </div>
   )
 }
-
