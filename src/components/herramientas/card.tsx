@@ -35,14 +35,11 @@ export const CardHerramientas = ({ herramientas }: CardHerramientasProps) => {
               <h4 className="font-bold text-large text-body">{herramienta.nombre}</h4>
 
               {herramienta.link && (
-                <Link
-                  href={herramienta.link}
-                  className="mt-2 text-blue-500 underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visitar sitio
-                </Link>
+                <div className="flex mt-7 space-x-2">
+                  <Link isExternal showAnchorIcon href={herramienta.link} className="text-[#007B9D] font-semibold">
+                    Visitar sitio
+                  </Link>
+                </div>
               )}
 
               {/* Botones para descargar Aplicación y PDF */}

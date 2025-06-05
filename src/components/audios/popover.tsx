@@ -5,9 +5,10 @@ interface AudioPopoverProps {
   label: string;
   buttonLabel?: string;
   letra?: string;
+  colaborador?: string;
 }
 
-const AudioPopover: React.FC<AudioPopoverProps> = ({ label, buttonLabel = "Letra", letra }) => {
+const AudioPopover: React.FC<AudioPopoverProps> = ({ label, buttonLabel = "Letra", letra, colaborador }) => {
   const [letraContent, setLetraContent] = useState<string>("");
 
   useEffect(() => {
@@ -36,6 +37,7 @@ const AudioPopover: React.FC<AudioPopoverProps> = ({ label, buttonLabel = "Letra
           ) : (
             <p className="text-muted-foreground italic">Cargando letra...</p>
           )}
+          <h3 className="font-bold mt-2 text-left">{colaborador}</h3>
         </div>
       </PopoverContent>
     </Popover>

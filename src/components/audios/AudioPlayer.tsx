@@ -11,6 +11,7 @@ export interface Audios {
   caratula: string
   src: string
   letra?: string
+  colaboradorLetra?: string
   id: number
 }
 
@@ -38,7 +39,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audios }) => {
         <Card key={audio.id} className="relative p-4">
           {audio.letra && (
             <div className="absolute top-2 right-2 z-10">
-              <AudioPopover label={`${audio.nombre} de ${audio.autor}`} letra={audio.letra} />
+              <AudioPopover label={`${audio.nombre} de ${audio.autor}`} letra={audio.letra} colaborador={audio.colaboradorLetra}/>
             </div>
           )}
           <div className="flex flex-col items-center">

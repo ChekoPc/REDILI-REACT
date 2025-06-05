@@ -1,5 +1,5 @@
 import DefaultLayout from "@/layouts/default";
-import { Image } from "@heroui/react"
+import { Image, Link } from "@heroui/react"
 
 
 export default function AcercaDePage() {
@@ -49,11 +49,15 @@ export default function AcercaDePage() {
             <span className="text-2xl font-bold mb-4 text-title">
               Contacto
             </span>
-            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
-              www.unca.edu.mx
+            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body">
+              <Link isExternal showAnchorIcon href="https://www.unca.edu.mx" className="text-[#878E83]">
+                Universidad de la Cañada
+              </Link>
             </p>
-            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
-              foroTCA@unca.edu.mx
+            <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body">
+              <Link isExternal showAnchorIcon href="mailto:foroTCA@unca.edu.mx" className="text-[#878E83]">
+                foroTCA@unca.edu.mx
+              </Link>
             </p>
           </div>
 

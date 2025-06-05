@@ -3,6 +3,8 @@ export interface CuentoCuicateco {
     autor: string;
     caratula: string;
     src: string;
+    letra?: string;
+    colaboradorLetra?: string;
     id: number;
 }
 

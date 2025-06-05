@@ -4,6 +4,7 @@ export interface CuentoMazateco {
     caratula: string;
     src: string;
     letra?: string;
+    colaboradorLetra?: string;
     id: number;
 }
 
@@ -13,6 +14,8 @@ export const cuentosMazatecos: CuentoMazateco[] = [
         autor: "Cuento Nativo", 
         caratula: "/audios/audio1.png",
         src: "/audios/audio1.mp3",
+        letra: "/audios/audio1.txt",
+        colaboradorLetra: "Colaborador: lorem ipsum",
         id: 1
     },
     {
@@ -20,6 +23,7 @@ export const cuentosMazatecos: CuentoMazateco[] = [
         autor: "Cuento Nativo", 
         caratula: "/audios/audio1.png",
         src: "/audios/audio1.mp3",
+        letra: "/audios/audio1.txt",
         id: 2
     },
     {
@@ -27,6 +31,7 @@ export const cuentosMazatecos: CuentoMazateco[] = [
         autor: "Cuento Nativo", 
         caratula: "/audios/audio1.png",
         src: "/audios/audio1.mp3",
+        letra: "/audios/audio1.txt",
         id: 3
     },
     {
