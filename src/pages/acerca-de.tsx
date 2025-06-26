@@ -6,6 +6,7 @@ export default function AcercaDePage() {
   return (
     <DefaultLayout>
       <div className="contenedor-principal margin-top-page">
+        {/* seccion 1 */}
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-4 px-4 sm:px-4 lg:px-0">
           {/* columna 1 */}
           <div className="p-4 order-2 md:order-1">
@@ -15,34 +16,30 @@ export default function AcercaDePage() {
             <div className="p-4">
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Image
-                  alt="TCA"
-                  className="object-cover rounded-xl w-40 sm:w-[280px]"
-                  src="/images/acerca-de/pic2.png"
-                  width={280}
+                  alt="Profesora - Investigadora"
+                  className="object-cover rounded-xl"
+                  src="/images/pic1.jpeg"
+                  width={80}
+                  height={110}
                 />
                 <div className="text-center sm:text-left mt-2 sm:mt-0">
-                  <p className="font-bold">Cuerpo Académico Tecnología Computacional Aplicada</p>
-                  <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
-                    Conjunto de profesores que están a cargo del desarrollo de aplicaciones
-                    orientadas a coadyuvar en la sociedad.
-                  </p>
+                  <p className="font-bold">M. C. Beatriz Adriana Sabino Moxo</p>
+                  <p className="text-body ">Profesora-Investigadora</p>
                 </div>
               </div>
             </div>
             <div className="p-4">
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Image
-                  alt="TCA"
-                  className="object-cover rounded-xl w-40 sm:w-[280px]"
-                  src="/images/acerca-de/pic3.png"
-                  width={280}
+                  alt="Profesor Investigador"
+                  className="object-cover rounded-xl"
+                  src="/images/pic2.jpg"
+                  width={80}
+                  height={110}
                 />
                 <div className="text-center sm:text-left mt-2 sm:mt-0">
-                  <p className="font-bold">Laboratorio de Investigación y Desarrollo de Software</p>
-                  <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
-                    Conjunto de profesores que están a cargo del desarrollo de aplicaciones
-                    orientadas a coadyuvar en la sociedad.
-                  </p>
+                  <p className="font-bold">M. C. José Alberto Márquez Domínguez</p>
+                  <p className="text-body ">Profesor Investigador</p>
                 </div>
               </div>
             </div>
@@ -92,6 +89,47 @@ export default function AcercaDePage() {
             </div>
           </div>
         </div>
+        {/* seccion 2 */}
+        <div className="flex flex-col md:flex-row gap-4 px-4">
+          {/* bloque 1 */}
+          <div className="p-4 w-full md:w-1/2">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Image
+                alt="TCA"
+                className="object-cover rounded-xl w-40 sm:w-[280px]"
+                src="/images/acerca-de/pic2.png"
+                width={280}
+              />
+              <div className="text-center sm:text-left mt-2 sm:mt-0">
+                <p className="font-bold">Cuerpo Académico Tecnología Computacional Aplicada</p>
+                <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
+                  Conjunto de profesores que están a cargo del desarrollo de aplicaciones
+                  orientadas a coadyuvar en la sociedad.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* bloque 2 */}
+          <div className="p-4 w-full md:w-1/2">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <Image
+                alt="TCA"
+                className="object-cover rounded-xl w-40 sm:w-[280px]"
+                src="/images/acerca-de/pic3.png"
+                width={280}
+              />
+              <div className="text-center sm:text-left mt-2 sm:mt-0">
+                <p className="font-bold">Laboratorio de Investigación y Desarrollo de Software</p>
+                <p className="text-1xl font-bold mb-4 mt-5 text-justify text-body ">
+                  Conjunto de profesores que están a cargo del desarrollo de aplicaciones
+                  orientadas a coadyuvar en la sociedad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </DefaultLayout>
   );
