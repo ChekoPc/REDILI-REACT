@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link } from "@heroui/link"
 import {
   Navbar as HeroUINavbar,
@@ -19,6 +19,12 @@ import { ThemeSwitch } from "@/components/theme-switch"
 export const Navbar = () => {
   // Añadimos un estado para controlar la apertura/cierre del menú
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [pathname, setPathname] = useState<string>(() => typeof window !== "undefined" ? window.location.pathname : "/");
+
+  // Detectar la ruta actual en el cliente
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  }, []);
 
   // Función para manejar el toggle del menú
   const handleMenuToggle = () => {
@@ -48,20 +54,25 @@ export const Navbar = () => {
           </NavbarContent>
 
           {/* Menú de navegación */}
-          <NavbarContent className="hidden lg:flex gap-6 p-2 absolute left-1/2 transform -translate-x-1/2">
-            {siteConfig.navItems.map((item) => (
-              <NavbarItem key={item.href}>
-                <Link
-                  className={clsx(
-                    "text-white font-medium hover:text-white/80 transition-colors duration-200",
-                    "data-[active=true]:underline data-[active=true]:font-semibold",
-                  )}
-                  href={item.href}
-                >
-                  {item.label}
-                </Link>
-              </NavbarItem>
-            ))}
+          <NavbarContent className="hidden lg:flex gap-3 p-2 absolute left-1/2 transform -translate-x-1/2">
+            {siteConfig.navItems.map((item) => {
+              const isActive = pathname === item.href
+              return (
+                <NavbarItem key={item.href}>
+                  <Link
+                    className={clsx(
+                      "w-32 flex items-center justify-center",
+                      isActive
+                        ? "bg-white text-[#007897] rounded-xl font-semibold py-2 shadow"
+                        : "text-white hover:text-white/80",
+                    )}
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
+                </NavbarItem>
+              )
+            })}
           </NavbarContent>
 
           {/* Interruptor de tema */}
