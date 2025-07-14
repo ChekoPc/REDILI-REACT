@@ -39,7 +39,7 @@ export default function AcercaDePage() {
                 />
                 <div className="text-center sm:text-left mt-2 sm:mt-0">
                   <p className="font-bold">M. C. José Alberto Márquez Domínguez</p>
-                  <p className="text-body ">Profesor Investigador</p>
+                  <p className="text-body ">Profesor-Investigador</p>
                 </div>
               </div>
             </div>

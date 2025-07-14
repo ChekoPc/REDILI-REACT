@@ -12,19 +12,20 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar"
 import clsx from "clsx"
-
 import { siteConfig } from "@/config/site"
 import { ThemeSwitch } from "@/components/theme-switch"
 
 export const Navbar = () => {
   // Añadimos un estado para controlar la apertura/cierre del menú
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [pathname, setPathname] = useState<string>(() => typeof window !== "undefined" ? window.location.pathname : "/");
+  const [pathname, setPathname] = useState<string>(() =>
+    typeof window !== "undefined" ? window.location.pathname : "/",
+  )
 
   // Detectar la ruta actual en el cliente
   useEffect(() => {
-    setPathname(window.location.pathname);
-  }, []);
+    setPathname(window.location.pathname)
+  }, [])
 
   // Función para manejar el toggle del menú
   const handleMenuToggle = () => {
@@ -35,7 +36,7 @@ export const Navbar = () => {
     <HeroUINavbar
       maxWidth="xl"
       position="sticky"
-      className="bg-[#006B89] shadow-md backdrop-blur-md py-3 px-0 z-50"
+      className="fixed top-0 bg-[#006B89] shadow-md backdrop-blur-md py-3 px-0 z-50"
       // Controlamos el estado del menú explícitamente
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -90,7 +91,7 @@ export const Navbar = () => {
             className="text-white ml-2"
             // Usamos el manejador de eventos personalizado
             onClick={handleMenuToggle}
-          // Aseguramos que el estado visual refleje el estado real
+            // Aseguramos que el estado visual refleje el estado real
           />
         </NavbarContent>
       </div>
@@ -100,7 +101,6 @@ export const Navbar = () => {
         <Link className="flex justify-center mb-4 mt-5" href="/">
           <img src="/logo-white.png" alt="Logo REDILI" className="w-16 h-16" />
         </Link>
-
         <div className="flex flex-col items-center gap-5 text-white text-lg">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={index} className="w-full text-center">
