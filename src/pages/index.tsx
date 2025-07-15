@@ -1,6 +1,8 @@
 import DefaultLayout from "@/layouts/default"
 import { Image } from "@heroui/react"
 
+import EmblaCarousel from "@/components/inicio/carousel"
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
@@ -87,6 +89,7 @@ export default function IndexPage() {
           </div>
         </div>
       </div>
+      <EmblaCarousel/>
     </DefaultLayout>
   )
 }
