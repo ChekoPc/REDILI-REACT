@@ -2,6 +2,40 @@ import DefaultLayout from "@/layouts/default"
 
 import EmblaCarousel from "@/components/inicio/carousel"
 
+// Define aquí el arreglo slides
+const slides = [
+  {
+    id: 1,
+    title: "Repositorio digital de lenguas indígenas",
+    subtitle: "REDILI",
+    backgroundImage: "/images/carrucel/img1.webp",
+  },
+  {
+    id: 2,
+    title: "Sesión de carteles",
+    subtitle: "",
+    description:
+      "Participación en el Foro de Tecnología Computacional Aplicada: Al rescate, conservación y difusión de las Lenguas Indígenas.",
+    backgroundImage: "/images/carrucel/img2.webp",
+  },
+  {
+    id: 3,
+    title: "Rescatando nuestras",
+    subtitle: "raíces",
+    description:
+      "Desde Teotitlán de Flores Magón, Oax. México.",
+    backgroundImage: "/images/carrucel/img3.webp",
+  },
+  {
+    id: 4,
+    title: "Rescatando nuestras",
+    subtitle: "raíces",
+    description:
+      "Desde Chiquihuitlán de Benito Juárez, Oax. México.",
+    backgroundImage: "/images/carrucel/img4.webp",
+  },
+]
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
@@ -45,7 +79,7 @@ export default function IndexPage() {
           </div>
           {/* columna 2 */}
           <div className="md:col-span-2">
-            <EmblaCarousel />
+            <EmblaCarousel slides={slides} />
           </div>
         </div>
       </div>

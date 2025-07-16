@@ -10,51 +10,15 @@ interface SlideData {
   id: number
   title: string
   subtitle: string
-  description: string
-  buttonText: string
+  description?: string
   backgroundImage: string
 }
 
-const slides: SlideData[] = [
-  {
-    id: 1,
-    title: "Repositorio digital de lenguas indígenas",
-    subtitle: "REDILI",
-    description:
-      "Conozca el futuro impulsado por IA de Acer, en el que las barreras se rompen y la tecnología transforma la manera en que vivimos, trabajamos y jugamos.",
-    buttonText: "Descubra lo que vendrá en el futuro",
-    backgroundImage: "https://scontent.fpbc2-1.fna.fbcdn.net/v/t39.30808-6/489994530_3946383358983097_7373450634509709026_n.jpg?ccb=1-7&_nc_sid=833d8c&_nc_ohc=LcsC8o6sXq4Q7kNvwFKptyE&_nc_oc=AdmOSC4fNt_7JfS3VbSA7anV0Pov6iJvpaTvcAqkCInHbOyIb3MXS4sodiUWV2hupL0&_nc_zt=23&_nc_ht=scontent.fpbc2-1.fna&_nc_gid=Ob9MCTlehbi8oEtc38rylA&oh=00_AfS-uI3jA7JOT8U1xnJE6opUnAwz4aCmxLnQVrX4kWN7ug&oe=687E0355",
-  },
-  {
-    id: 2,
-    title: "Innovación",
-    subtitle: "TECNOLÓGICA",
-    description:
-      "Descubre las últimas innovaciones en tecnología que están transformando el mundo digital y creando nuevas oportunidades.",
-    buttonText: "Explorar innovaciones",
-    backgroundImage: "https://scontent.fpbc2-3.fna.fbcdn.net/v/t39.30808-6/490384326_1189653556279451_1397494551878765816_n.jpg?ccb=1-7&_nc_sid=127cfc&_nc_ohc=0_xuaKhgniQQ7kNvwHKAGV7&_nc_oc=AdlL5pqR-FWhDAXnmRXA7hAotpsL-Mrn9EpH0upTWvz5QxfVLfp9g_wZ-Vj-rtyUFk8&_nc_zt=23&_nc_ht=scontent.fpbc2-3.fna&_nc_gid=8RUxwVexSCnirxEm4IB7eQ&oh=00_AfTBI8CA99yHHIm8aPYkNiaHObQDrq_kjEhuUMllV_Lm_g&oe=687DDC5B",
-  },
-  {
-    id: 3,
-    title: "Futuro",
-    subtitle: "DIGITAL",
-    description:
-      "Únete a la revolución digital con las herramientas más avanzadas para profesionales y gamers de todo el mundo.",
-    buttonText: "Conocer más",
-    backgroundImage: "https://scontent.fpbc2-1.fna.fbcdn.net/v/t39.30808-6/487214719_1207173264744519_8283324817087142741_n.jpg?ccb=1-7&_nc_sid=127cfc&_nc_ohc=9tpT6a24oegQ7kNvwEbiKbc&_nc_oc=AdmWvKZ3OcEgdIZRm9D56X5s6Q6ZCiaeixDZbjkRQ4PhoqgeVMnJgilm5d2dX8C-W-o&_nc_zt=23&_nc_ht=scontent.fpbc2-1.fna&_nc_gid=YCh9M8T5YEiZWz_uDxSUHQ&oh=00_AfTCszn2Ki8T6XUrM43mHoiGscZc4v8CYGNNGiZRnZogfA&oe=687E062E",
-  },
-  {
-    id: 4,
-    title: "Desarrollando el",
-    subtitle: "FUTURO",
-    description:
-      "La revolución digital ya esta aqui con las herramientas más avanzadas para profesionales y gamers de todo el mundo.",
-    buttonText: "Conocer más",
-    backgroundImage: "https://scontent.fpbc2-3.fna.fbcdn.net/v/t39.30808-6/484097510_2297716640599516_5212419113953037461_n.jpg?ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Eth9qX5HzA8Q7kNvwGQ72aL&_nc_oc=AdkAIdlSGIsWnZGr6k898h1EpOsvXBp4n-1RV4L_D-nTX7nYEK5vyCXPW3aUjXUncew&_nc_zt=23&_nc_ht=scontent.fpbc2-3.fna&_nc_gid=s4ViI6F-rifRq-h8Fk6r_g&oh=00_AfSt__JZaAjfILm9i611CxENrcGGJCpM8frmFCUrWRqa4w&oe=687DFAEF",
-  },
-]
+interface EmblaCarouselProps {
+  slides: SlideData[]
+}
 
-export default function EmblaCarousel() {
+export default function EmblaCarousel({ slides }: EmblaCarouselProps) {
   const [isPlaying, setIsPlaying] = useState(true)
   const [selectedIndex, setSelectedIndex] = useState(0)
   const autoplayRef = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }))
@@ -135,11 +99,9 @@ export default function EmblaCarousel() {
                     <h2 className="text-white text-4xl lg:text-5xl font-bold">{slide.subtitle}</h2>
                   </div>
                   {/* Descripción */}
-                  <p className="text-white text-lg mb-8 leading-relaxed max-w-xl mx-14 md:mx-0">{slide.description}</p>
-                  {/* Botón */}
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full font-medium transition-colors duration-200">
-                    {slide.buttonText}
-                  </button>
+                  {slide.description && (
+                    <p className="text-white text-lg mb-8 leading-relaxed max-w-xl mx-14 md:mx-0">{slide.description}</p>
+                  )}
                 </div>
               </div>
             </div>
